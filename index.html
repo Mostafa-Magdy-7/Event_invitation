@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E5D0AC;
+            margin: 15px;
+            text-align: center;
+        }
+        
+        form {
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], input[type="time"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .radio-group {
+            margin: 10px 0;
+        }
+        .radio-group label {
+            display: inline;
+            margin-right: 15px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>THE EVENT</h1>
+    <p>
+        <b>We announce the event called "THE EVENT," and by reading this, you are invited to it.</b>
+    </p>
+    <p>
+        The event will take place on 
+        <time datetime="2025-02-01T22:00">February 1st, 2025, at 10:00 PM</time>.
+    </p>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="attendance" value="attend" required> Will Attend
+            </label>
+            <label>
+                <input type="radio" name="attendance" value="not_attend" required> Not Attend
+            </label>
+        </div>
+        
+        <label for="arrival-time">What time will you arrive?</label>
+        <input type="time" id="arrival-time" name="arrival_time">
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
